@@ -9,8 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RegularizacaoDeImoveisRouteImport } from './routes/regularizacao-de-imoveis'
+import { Route as LeilaoDeImoveisRouteImport } from './routes/leilao-de-imoveis'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RegularizacaoDeImoveisRoute = RegularizacaoDeImoveisRouteImport.update({
+  id: '/regularizacao-de-imoveis',
+  path: '/regularizacao-de-imoveis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeilaoDeImoveisRoute = LeilaoDeImoveisRouteImport.update({
+  id: '/leilao-de-imoveis',
+  path: '/leilao-de-imoveis',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +31,50 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/leilao-de-imoveis': typeof LeilaoDeImoveisRoute
+  '/regularizacao-de-imoveis': typeof RegularizacaoDeImoveisRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/leilao-de-imoveis': typeof LeilaoDeImoveisRoute
+  '/regularizacao-de-imoveis': typeof RegularizacaoDeImoveisRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/leilao-de-imoveis': typeof LeilaoDeImoveisRoute
+  '/regularizacao-de-imoveis': typeof RegularizacaoDeImoveisRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/leilao-de-imoveis' | '/regularizacao-de-imoveis'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/leilao-de-imoveis' | '/regularizacao-de-imoveis'
+  id: '__root__' | '/' | '/leilao-de-imoveis' | '/regularizacao-de-imoveis'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LeilaoDeImoveisRoute: typeof LeilaoDeImoveisRoute
+  RegularizacaoDeImoveisRoute: typeof RegularizacaoDeImoveisRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/regularizacao-de-imoveis': {
+      id: '/regularizacao-de-imoveis'
+      path: '/regularizacao-de-imoveis'
+      fullPath: '/regularizacao-de-imoveis'
+      preLoaderRoute: typeof RegularizacaoDeImoveisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leilao-de-imoveis': {
+      id: '/leilao-de-imoveis'
+      path: '/leilao-de-imoveis'
+      fullPath: '/leilao-de-imoveis'
+      preLoaderRoute: typeof LeilaoDeImoveisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +87,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LeilaoDeImoveisRoute: LeilaoDeImoveisRoute,
+  RegularizacaoDeImoveisRoute: RegularizacaoDeImoveisRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
