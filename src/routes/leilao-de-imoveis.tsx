@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-// @ts-expect-error raw import
+// @ts-ignore raw import
 import html from "../../public/leilao-de-imoveis/index.html?raw";
 
 export const Route = createFileRoute("/leilao-de-imoveis")({
