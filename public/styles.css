@@ -402,3 +402,274 @@ section{padding:104px 0;position:relative}
   *{animation-duration:.001s !important;transition-duration:.001s !important}
   .marquee-track{animation:none}
 }
+
+/* ============================================================
+   v3 — Texturas, ornamentos e profundidade visual
+   ============================================================ */
+
+/* Grão sutil em todo o site (papel artesanal) */
+body{
+  background-color:#fbf7ec;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.11  0 0 0 0 0.10  0 0 0 0.10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size:220px 220px;
+}
+
+/* Textura de papel marfim nas seções claras */
+.bg-soft{
+  background-color:var(--bg-cream);
+  background-image:
+    radial-gradient(circle at 18% 22%,rgba(168,137,63,.06),transparent 55%),
+    radial-gradient(circle at 82% 78%,rgba(58,52,44,.05),transparent 55%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.66  0 0 0 0 0.55  0 0 0 0 0.30  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23p)'/></svg>");
+}
+
+/* Textura grain + linhas finas douradas no dark */
+.bg-dark::before,.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 0.88  0 0 0 0 0.55  0 0 0 0.07 0'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>"),
+    repeating-linear-gradient(90deg,transparent 0 119px,rgba(168,137,63,.05) 119px 120px);
+  mix-blend-mode:overlay;opacity:.55;
+}
+.bg-dark>*,.hero>*{position:relative;z-index:1}
+
+/* Borda dourada superior nas seções de fundo escuro */
+.bg-dark{position:relative;border-top:1px solid rgba(168,137,63,.18);border-bottom:1px solid rgba(168,137,63,.12)}
+.bg-dark::after{
+  content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:120px;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);
+}
+
+/* ====== Ornamento divisor (losango + linhas) ====== */
+.ornament{
+  display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 28px;
+  width:100%;max-width:240px;color:var(--accent);
+}
+.ornament::before,.ornament::after{
+  content:"";flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,currentColor,transparent);
+  opacity:.55;
+}
+.ornament svg{width:22px;height:22px;flex:0 0 22px}
+.bg-dark .ornament{color:var(--accent-soft)}
+
+/* ====== Section head com fleuron ====== */
+.section-head{position:relative}
+.section-head h2{position:relative;display:inline-block}
+.section-head h2::after{
+  content:"";display:block;margin:18px auto 0;width:64px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);
+}
+
+/* Eyebrow com dois traços */
+.eyebrow{position:relative}
+.eyebrow::after{
+  content:"";width:22px;height:1px;background:currentColor;opacity:.55;
+  display:inline-block;margin-left:.35rem;
+}
+
+/* ====== Foil dourado em destaques ====== */
+.hero h1 em,
+.gold-foil{
+  background:linear-gradient(100deg,#a8893f 0%,#e8cf8a 22%,#fff3c4 38%,#e8cf8a 56%,#a8893f 78%,#7a6326 100%);
+  background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 7s ease-in-out infinite;
+  font-style:italic;
+}
+@keyframes shimmer{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+/* Brilho/reflexo nos botões */
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::after{
+  content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(115deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:skewX(-18deg);transition:left .8s var(--ease);pointer-events:none;
+}
+.btn:hover::after{left:140%}
+.btn-gold{
+  background:
+    linear-gradient(180deg,#d9bd7d 0%,#a8893f 55%,#8a6e2c 100%);
+  color:#1f1d1a;
+  border:1px solid #c2a25a;
+  box-shadow:var(--shadow-gold),inset 0 1px 0 rgba(255,240,200,.6),inset 0 -1px 0 rgba(0,0,0,.18);
+}
+
+/* ====== Hero figure: moldura de canto art-déco ====== */
+.hero-figure{padding:14px}
+.hero-figure::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  background:
+    linear-gradient(var(--accent),var(--accent)) top left/26px 1px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) top left/1px 26px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) top right/26px 1px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) top right/1px 26px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) bottom left/26px 1px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) bottom left/1px 26px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) bottom right/26px 1px no-repeat,
+    linear-gradient(var(--accent),var(--accent)) bottom right/1px 26px no-repeat;
+  opacity:.85;
+}
+
+/* Selo OAB sobreposto no hero */
+.hero-seal{
+  position:absolute;top:-22px;right:-22px;z-index:3;
+  width:96px;height:96px;border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 35%,#e8cf8a,#a8893f 60%,#7a6326);
+  color:#1f1d1a;display:flex;align-items:center;justify-content:center;
+  text-align:center;font-family:var(--serif);font-weight:600;font-size:.78rem;line-height:1.1;
+  box-shadow:0 18px 40px rgba(0,0,0,.45),inset 0 2px 4px rgba(255,240,200,.6),inset 0 -3px 6px rgba(0,0,0,.25);
+  border:2px solid rgba(255,240,200,.5);
+  letter-spacing:.04em;
+  transform:rotate(-8deg);
+}
+.hero-seal::before{
+  content:"";position:absolute;inset:6px;border-radius:50%;
+  border:1px dashed rgba(31,29,26,.4);
+}
+
+/* ====== Cartões com textura interna ====== */
+.step,.card,.review,.faq details,.authority-card,.story,.gbadge,.docs li{
+  background-color:#fff;
+  background-image:
+    radial-gradient(circle at 12% 8%,rgba(168,137,63,.05),transparent 55%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='c'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='1' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.55  0 0 0 0 0.45  0 0 0 0 0.25  0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23c)'/></svg>");
+  position:relative;
+}
+
+/* Cards com cantos dourados (esquina superior esquerda) */
+.step::before,.card::before{
+  content:"";position:absolute;top:10px;left:10px;width:18px;height:18px;
+  border-top:1px solid var(--accent);border-left:1px solid var(--accent);
+  opacity:.7;
+}
+.step::after,.card::after{
+  /* mantém underline gold no card sem quebrar o anterior */
+}
+.step{counter-increment:step}
+.step .num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:auto;font-size:2.2rem;
+}
+.step .num::after{
+  content:"";display:block;width:36px;height:1px;background:var(--accent);margin-top:12px;
+}
+
+/* Featured card com padrão diagonal sutil */
+.card.featured{
+  background-image:
+    repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 2px,transparent 2px 14px),
+    linear-gradient(160deg,var(--primary),var(--bg-dark));
+}
+.card.featured::before{border-color:var(--accent-soft)}
+
+/* ====== Story com aspas decoradas e textura ====== */
+.story{
+  border-left:none;border:1px solid var(--line-strong);
+  position:relative;padding:48px 48px 40px;
+}
+.story::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,var(--accent-2),var(--accent));
+  border-radius:4px 0 0 4px;
+  font-size:0;
+}
+.story::after{
+  content:"";position:absolute;right:24px;bottom:18px;width:38px;height:38px;opacity:.5;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='%23a8893f'><path d='M12 8c-4 0-8 4-8 10v14h12V20H8c0-4 2-8 4-10V8zm16 0c-4 0-8 4-8 10v14h12V20h-8c0-4 2-8 4-10V8z'/></svg>") center/contain no-repeat;
+}
+.story-quote-mark{
+  position:absolute;top:-30px;left:34px;
+  font-family:var(--serif);font-size:6rem;line-height:1;color:var(--accent);
+  background:#fff;padding:0 10px;font-weight:600;
+}
+
+/* ====== Docs: cheque com círculo dourado + textura ====== */
+.docs li{padding:20px 22px}
+.docs li::before{
+  width:26px;height:26px;
+  background:
+    radial-gradient(circle at 30% 30%,#e8cf8a,#a8893f 70%) ,
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path d='M13.5 4 6 11.5 2.5 8l1-1L6 9.5 12.5 3z'/></svg>") center/12px no-repeat;
+  box-shadow:0 4px 10px rgba(168,137,63,.35),inset 0 1px 0 rgba(255,240,200,.5);
+}
+
+/* ====== FAQ: numeração serifada ====== */
+.faq{counter-reset:q}
+.faq details{counter-increment:q}
+.faq summary{padding-left:64px;position:relative}
+.faq summary::before{
+  content:counter(q,decimal-leading-zero);
+  position:absolute;left:22px;top:50%;transform:translateY(-50%);
+  font-family:var(--serif);font-size:1.1rem;color:var(--accent);font-weight:500;
+  letter-spacing:.05em;
+}
+.faq .answer{padding-left:64px}
+
+/* ====== Authority card com selo ====== */
+.authority-card{
+  border-top:none;
+  border:1px solid var(--line-strong);
+  padding:22px 24px 22px 64px;
+}
+.authority-card::before{
+  content:"";position:absolute;left:18px;top:50%;transform:translateY(-50%);
+  width:34px;height:34px;border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 35%,#e8cf8a,#a8893f 65%);
+  box-shadow:inset 0 1px 0 rgba(255,240,200,.6),0 6px 14px rgba(168,137,63,.35);
+}
+.authority-card::after{
+  content:"";position:absolute;left:23px;top:50%;transform:translateY(-50%);
+  width:24px;height:24px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f1d1a'><path d='M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3zm-1 14-4-4 1.4-1.4L11 13.2l4.6-4.6L17 10l-6 6z'/></svg>") center/contain no-repeat;
+}
+
+/* ====== Reviews: aspa decorativa ====== */
+.review{padding-top:46px}
+.review::before{
+  content:"“";position:absolute;top:6px;left:22px;
+  font-family:var(--serif);font-size:3.6rem;line-height:1;color:var(--accent);font-weight:600;
+}
+
+/* ====== Marquee com moldura ====== */
+.marquee{
+  border:1px solid rgba(168,137,63,.25);
+  padding:14px;background:rgba(20,18,16,.4);
+}
+.marquee-track img{border:1px solid rgba(168,137,63,.3)}
+
+/* ====== CTA final com padrão decorativo ====== */
+.cta-final{
+  background-image:
+    radial-gradient(700px 400px at 50% 0%,rgba(168,137,63,.22),transparent 60%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><path d='M30 4 36 24l20 0-16 12 6 20-16-12-16 12 6-20-16-12 20 0z' fill='none' stroke='%23a8893f' stroke-width='.4' opacity='.18'/></svg>"),
+    linear-gradient(135deg,var(--bg-dark),var(--primary));
+  background-size:auto,90px 90px,auto;
+}
+.cta-final::after{
+  content:"";display:block;margin:38px auto 0;width:120px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);
+}
+
+/* ====== Footer com grão ====== */
+.footer{
+  background-color:#0d0b09;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='f'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.66  0 0 0 0 0.53  0 0 0 0 0.25  0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+}
+.footer::before{
+  content:"";display:block;width:100%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);
+  margin-bottom:48px;margin-top:-16px;
+}
+
+/* ====== Reduced motion override ====== */
+@media (prefers-reduced-motion: reduce){
+  .gold-foil,.hero h1 em{animation:none}
+}
