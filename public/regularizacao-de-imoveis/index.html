@@ -425,6 +425,19 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0a1a2f;line-height:1
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  function enviarFormRegular(e){
+    e.preventDefault();
+    var nome = document.getElementById('f-nome').value.trim();
+    var wpp  = document.getElementById('f-wpp').value.trim();
+    var caso = document.getElementById('f-caso').value.trim();
+    var msg = "Olá! Quero iniciar a análise de regularização do meu imóvel.%0A%0A"
+            + "Nome: " + encodeURIComponent(nome) + "%0A"
+            + "WhatsApp: " + encodeURIComponent(wpp) + "%0A"
+            + (caso ? "Resumo: " + encodeURIComponent(caso) : "");
+    try{ click_whatsapp('form-cta'); }catch(_){}
+    window.location.href = "https://wa.me/{{WHATSAPP}}?text=" + msg;
+    return false;
+  }
 </script>
 
 </body>
