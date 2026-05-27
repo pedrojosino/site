@@ -1169,27 +1169,30 @@ body{
 .btn-green,
 .hero .btn-green,
 .bg-dark .btn-green{
-  background:linear-gradient(180deg,#C19553 0%,#EEC57F 60%,#C19553 100%) !important;
+  background:linear-gradient(180deg,#F5D58F 0%,#EEC57F 55%,#C19553 100%) !important;
   background-size:auto !important;
   background-position:0 0 !important;
   color:#0A0A0A !important;
+  font-weight:700 !important;
+  letter-spacing:.01em !important;
   border:1px solid #C19553 !important;
   text-shadow:none !important;
   box-shadow:
-    0 1px 0 rgba(255,240,200,.45) inset,
-    0 -1px 0 rgba(0,0,0,.18) inset,
+    0 1px 0 rgba(255,245,215,.55) inset,
+    0 -1px 0 rgba(0,0,0,.15) inset,
     0 10px 24px -10px rgba(238,197,127,.55) !important;
 }
 .btn-green:hover,
 .hero .btn-green:hover{
   transform:translateY(-2px);
-  filter:brightness(1.04);
+  filter:brightness(1.05);
   box-shadow:
-    0 1px 0 rgba(255,240,200,.55) inset,
-    0 -1px 0 rgba(0,0,0,.18) inset,
+    0 1px 0 rgba(255,245,215,.65) inset,
+    0 -1px 0 rgba(0,0,0,.15) inset,
     0 16px 32px -10px rgba(238,197,127,.65) !important;
 }
-.btn-green svg{color:#0A0A0A}
+.btn-green svg{color:#0A0A0A;stroke:#0A0A0A;width:18px;height:18px}
+
 
 /* CTA secundário — fantasma sóbrio */
 .btn-ghost,
