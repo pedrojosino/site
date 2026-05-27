@@ -363,18 +363,57 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0a1a2f;line-height:1
   </div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- CTA FINAL com micro-form -->
 <section id="contato" class="cta-final">
   <div class="container">
     <span class="eyebrow" style="color:var(--accent-soft)">Pronto para destravar</span>
-    <h2>Cansado de ver o imóvel sem estar no seu nome? Envie os documentos e comece a análise.</h2>
+    <h2>Cansado de ver o imóvel sem estar no seu nome? Comece a análise agora.</h2>
     <p>Resposta no mesmo dia útil. Atendimento nacional, 100% online. Custos transparentes desde a primeira conversa.</p>
-    <a class="btn btn-green btn-lg" href="https://wa.me/{{WHATSAPP}}?text=Ol%C3%A1%2C%20quero%20iniciar%20a%20an%C3%A1lise%20do%20meu%20caso%20de%20regulariza%C3%A7%C3%A3o." onclick="click_whatsapp('cta-final')">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.3L2 22l4.8-1.3A11 11 0 1 0 20.5 3.5Zm-8.5 18a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A9 9 0 1 1 12 21.5Z"/></svg>
-      Falar no WhatsApp agora
-    </a>
+
+    <form class="form-mini" onsubmit="return enviarFormRegular(event)">
+      <div class="row">
+        <div><label for="f-nome">Seu nome</label><input id="f-nome" type="text" required placeholder="Nome completo"></div>
+        <div><label for="f-wpp">WhatsApp</label><input id="f-wpp" type="tel" required placeholder="(DDD) 9 9999-9999"></div>
+      </div>
+      <label for="f-caso">Resumo do caso</label>
+      <textarea id="f-caso" placeholder="Ex.: comprei por contrato de gaveta em 2010, vendedor já faleceu..."></textarea>
+      <button class="btn btn-green btn-lg submit" type="submit">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.3L2 22l4.8-1.3A11 11 0 1 0 20.5 3.5Z"/></svg>
+        Enviar pelo WhatsApp
+      </button>
+      <p class="privacy">Seus dados são tratados conforme a LGPD e usados apenas para responder seu contato.</p>
+    </form>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div class="brand-mini">
+        <img src="/assets/logo-pj.png" alt="">
+        <strong style="color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.1rem">Pedro Josino Advogados</strong>
+      </div>
+      <p>Especialistas em Direito Imobiliário. Regularização de imóveis e leilões, com atendimento nacional online.</p>
+    </div>
+    <div>
+      <h4>Atuação</h4>
+      <p><a href="/regularizacao-de-imoveis">Regularização de Imóveis</a><br><a href="/leilao-de-imoveis">Leilão de Imóveis</a></p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <p><a href="https://wa.me/{{WHATSAPP}}" onclick="click_whatsapp('footer')">WhatsApp</a><br>{{EMAIL}}</p>
+    </div>
+    <div class="disclaimer">
+      <strong style="color:#cdd3df">{{RAZAO_SOCIAL}}</strong> · CNPJ {{CNPJ}} · Responsável técnico: Pedro Josino, OAB/UF {{OAB}}.<br>
+      Este site tem caráter exclusivamente informativo, em conformidade com o Provimento nº 205/2021 do Conselho Federal da OAB. Não veicula informações de êxito profissional, valores de honorários nem promessas de resultado. © <span id="year"></span> Pedro Josino Advogados. Todos os direitos reservados.
+    </div>
+    <div class="legal-grid" style="grid-column:1/-1">
+      <div><strong>Razão social</strong>{{RAZAO_SOCIAL}}<br>CNPJ {{CNPJ}}</div>
+      <div><strong>Responsável técnico</strong>Pedro Josino<br>OAB/UF {{OAB}}</div>
+      <div><strong>Conformidade</strong><a href="https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021" target="_blank" rel="noopener">Provimento OAB 205/2021</a><br>LGPD · Lei 13.709/2018</div>
+    </div>
+  </div>
+</footer>
 
 <footer class="footer">
   <div class="container">
