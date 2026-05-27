@@ -1026,10 +1026,17 @@ body{
   pointer-events:none; z-index:3; opacity:.85;
 }
 .hero-figure img{
+  display:block;
+  width:100%;
+  height:auto;
   border-radius:14px;
-  aspect-ratio:4/5 !important;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  object-position:center;
   box-shadow:0 20px 50px rgba(0,0,0,.5);
   filter:contrast(1.04) saturate(1.05);
+  position:relative;
+  z-index:1;
 }
 
 /* authority card upgrade */
