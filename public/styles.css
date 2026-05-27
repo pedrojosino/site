@@ -1296,3 +1296,101 @@ section + section::before{
   .btn:hover{transform:none}
   .btn:hover svg{transform:none}
 }
+
+/* ============================================================
+   FX layer — micro-interações leves (parceiro de /fx.js)
+   ============================================================ */
+
+/* Reveal on scroll */
+.fx-reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .7s var(--ease), transform .7s var(--ease);
+  will-change:opacity, transform;
+}
+.fx-reveal.fx-in{ opacity:1; transform:none }
+/* stagger natural por irmãos */
+section > .container > .fx-reveal:nth-child(2){ transition-delay:.06s }
+section > .container > .fx-reveal:nth-child(3){ transition-delay:.12s }
+section > .container > .fx-reveal:nth-child(4){ transition-delay:.18s }
+section > .container > .fx-reveal:nth-child(5){ transition-delay:.24s }
+.cards .fx-reveal:nth-child(2){ transition-delay:.08s }
+.cards .fx-reveal:nth-child(3){ transition-delay:.16s }
+.cards .fx-reveal:nth-child(4){ transition-delay:.24s }
+.steps .fx-reveal:nth-child(2){ transition-delay:.06s }
+.steps .fx-reveal:nth-child(3){ transition-delay:.12s }
+.steps .fx-reveal:nth-child(4){ transition-delay:.18s }
+.steps .fx-reveal:nth-child(5){ transition-delay:.24s }
+
+/* Hero parallax usa CSS custom props setadas pelo JS */
+.hero{ --mx:0; --my:0; --sy:0px; }
+.hero::before, .hero::after{
+  transition:transform .6s var(--ease);
+  transform:translate3d(calc(var(--mx) * 14px), calc(var(--my) * 10px + var(--sy)), 0);
+}
+.hero-figure{
+  transition:transform .5s var(--ease);
+  transform:translate3d(calc(var(--mx) * -8px), calc(var(--my) * -6px), 0);
+  will-change:transform;
+}
+
+/* Botões magnéticos: garante transição suave no transform inline */
+.btn{ transition:transform .25s var(--ease), background-position .5s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease), color .2s }
+
+/* Cards tilt: transform inline é setado pelo JS; precisamos do transition */
+.cards article, .docs article, .about-card{
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .25s;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+.cards article:hover, .docs article:hover, .about-card:hover{
+  box-shadow:0 30px 70px rgba(10,10,10,.22), 0 0 0 1px rgba(238,197,127,.35);
+}
+
+/* Header com sombra quando rolado */
+.header{ transition:background-color .3s var(--ease), box-shadow .3s var(--ease), border-color .3s }
+.header.is-scrolled{
+  background:rgba(10,10,10,.92);
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
+  border-bottom-color:rgba(238,197,127,.28);
+}
+
+/* Barra de progresso de leitura */
+.fx-progress{
+  position:fixed; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, #C19553, #EEC57F, #C19553);
+  transform-origin:0 50%; transform:scaleX(0);
+  z-index:100; pointer-events:none;
+  box-shadow:0 0 12px rgba(238,197,127,.55);
+}
+
+/* Links com underline crescente já existe — adiciona shine sutil em CTAs primários no hover */
+.btn-primary, .btn-wa{
+  background-size:200% 100%;
+}
+.btn-primary:hover, .btn-wa:hover{
+  background-position:100% 0;
+}
+
+/* Foco visível elegante */
+.btn:focus-visible, a:focus-visible{
+  outline:2px solid rgba(238,197,127,.65);
+  outline-offset:3px;
+  border-radius:10px;
+}
+
+/* Divisores dourados ganham brilho lento */
+section + section::before{
+  animation:dividerGlow 6s ease-in-out infinite;
+}
+@keyframes dividerGlow{
+  0%,100%{ opacity:.55 }
+  50%{ opacity:1 }
+}
+
+/* Respeitar reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .fx-reveal{ opacity:1 !important; transform:none !important; transition:none !important }
+  .hero::before, .hero::after, .hero-figure{ transform:none !important; transition:none !important }
+  .fx-progress, section + section::before{ animation:none !important }
+}
