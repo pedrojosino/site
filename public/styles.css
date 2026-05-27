@@ -4,22 +4,22 @@
    ============================================================ */
 
 :root{
-  --bg-dark:#091627;
-  --bg-deep:#040d18;
-  --bg-mid:#0f2440;
-  --primary:#102a4a;
-  --accent:#c9a45c;
-  --accent-2:#d9b878;
-  --accent-soft:#ecd6a4;
+  --bg-dark:#1f1d1a;
+  --bg-deep:#141210;
+  --bg-mid:#3a342c;
+  --primary:#3a342c;
+  --accent:#a8893f;
+  --accent-2:#c2a25a;
+  --accent-soft:#d9bd7d;
   --wa:#16a974;
   --wa-dark:#0e8a5e;
-  --text:#0c1a30;
-  --text-soft:#42526b;
-  --muted:#728195;
-  --line:#e7e2d6;
-  --line-strong:#d8d2c2;
-  --bg-soft:#f6f2e8;
-  --bg-cream:#fbf8f0;
+  --text:#1f1d1a;
+  --text-soft:#4a4640;
+  --muted:#7a736a;
+  --line:#e6dec9;
+  --line-strong:#d4c9ad;
+  --bg-soft:#f0ead9;
+  --bg-cream:#f7f1e1;
   --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
   --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --maxw:1200px;
