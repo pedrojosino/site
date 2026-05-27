@@ -33,15 +33,17 @@
 <link rel="preload" href="/styles.css" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/styles.css"></noscript>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id={{GTAG_ID}}"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '{{GTAG_ID}}');
-function click_whatsapp(origem){
-  try{ gtag('event','click_whatsapp',{event_category:'cta',event_label:origem||'lp-leilao'}); }catch(e){}
-}
+(function(){
+  var GTAG_ID='{{GTAG_ID}}';
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments);};
+  window.click_whatsapp=function(origem){try{gtag('event','click_whatsapp',{event_category:'cta',event_label:origem||'lp-leilao'});}catch(e){}};
+  if(GTAG_ID && GTAG_ID.indexOf('{{')!==0){
+    var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GTAG_ID;document.head.appendChild(s);
+    gtag('js',new Date());gtag('config',GTAG_ID);
+  }
+})();
 </script>
 
 <style>
