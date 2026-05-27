@@ -1124,118 +1124,115 @@ body{
 }
 
 /* ============================================================
-   v7 — Polimento de botões, foco, micro interações e revelações
+   v8 — Botões consolidados (única fonte de verdade)
+   Sobrepõe todas as definições anteriores. Mantém visual sóbrio,
+   premium e consistente em todas as seções.
    ============================================================ */
 
-/* Botões: base refinada, profundidade e estados consistentes */
-.btn{
+.btn,
+.hero .btn,
+.bg-dark .btn{
   position:relative;
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:.6rem;
+  padding:15px 26px;
+  border-radius:999px;
+  font-family:Inter,system-ui,sans-serif;
+  font-weight:600;
+  font-size:.97rem;
+  letter-spacing:.01em;
+  line-height:1;
+  text-decoration:none;
+  white-space:nowrap;
   cursor:pointer;
   user-select:none;
-  font-family:Inter,system-ui,sans-serif;
-  letter-spacing:.015em;
-  will-change:transform,box-shadow,background-position;
+  border:1px solid transparent;
+  overflow:hidden;
+  isolation:isolate;
   transition:
-    transform .35s cubic-bezier(.2,.7,.2,1),
-    box-shadow .35s cubic-bezier(.2,.7,.2,1),
-    background-position .6s ease,
+    transform .25s cubic-bezier(.2,.7,.2,1),
+    box-shadow .25s cubic-bezier(.2,.7,.2,1),
     background-color .25s ease,
-    color .2s ease,
     border-color .25s ease,
-    filter .25s ease;
+    color .2s ease,
+    filter .2s ease;
 }
+.btn-lg{padding:18px 32px; font-size:1.02rem}
+.btn svg{width:20px; height:20px; flex-shrink:0; transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+
+/* Reset de pseudo-elementos herdados de versões antigas */
+.btn::before, .btn::after,
+.hero .btn::before, .hero .btn::after{content:none !important; display:none !important}
+
+/* CTA primário — dourado sólido refinado */
+.btn-green,
+.hero .btn-green,
+.bg-dark .btn-green{
+  background:linear-gradient(180deg,#c8a04a 0%,#a8893f 60%,#8a6f33 100%) !important;
+  background-size:auto !important;
+  background-position:0 0 !important;
+  color:#1f1d1a !important;
+  border:1px solid #8a6f33 !important;
+  text-shadow:none !important;
+  box-shadow:
+    0 1px 0 rgba(255,240,200,.45) inset,
+    0 -1px 0 rgba(0,0,0,.18) inset,
+    0 10px 24px -10px rgba(168,137,63,.55) !important;
+}
+.btn-green:hover,
+.hero .btn-green:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.04);
+  box-shadow:
+    0 1px 0 rgba(255,240,200,.55) inset,
+    0 -1px 0 rgba(0,0,0,.18) inset,
+    0 16px 32px -10px rgba(168,137,63,.65) !important;
+}
+.btn-green svg{color:#1f1d1a}
+
+/* CTA secundário — fantasma sóbrio */
+.btn-ghost,
+.hero .btn-ghost,
+.bg-dark .btn-ghost{
+  background:rgba(240,234,217,.04) !important;
+  color:#f0ead9 !important;
+  border:1px solid rgba(217,189,125,.32) !important;
+  backdrop-filter:blur(4px);
+}
+.btn-ghost:hover,
+.hero .btn-ghost:hover{
+  background:rgba(217,189,125,.09) !important;
+  border-color:rgba(217,189,125,.6) !important;
+  color:#f6ecd2 !important;
+  transform:translateY(-2px);
+}
+
+/* CTA dourado alternativo (sólido) */
+.btn-gold{
+  background:linear-gradient(180deg,#d9bd7d 0%,#a8893f 60%,#8a6f33 100%) !important;
+  color:#1f1d1a !important;
+  border:1px solid #8a6f33 !important;
+  box-shadow:
+    0 1px 0 rgba(255,245,215,.6) inset,
+    0 -1px 0 rgba(0,0,0,.2) inset,
+    0 12px 28px -10px rgba(168,137,63,.55) !important;
+}
+.btn-gold:hover{transform:translateY(-2px); filter:brightness(1.05)}
+
+/* Estados de interação */
+.btn:hover svg{transform:translateX(2px)}
+.btn:active{transform:translateY(0) scale(.985); filter:brightness(.96)}
 .btn:focus-visible{
   outline:none;
   box-shadow:
     0 0 0 3px rgba(31,29,26,.85),
     0 0 0 6px rgba(217,189,125,.85),
-    0 18px 38px rgba(168,137,63,.35);
-}
-.btn:active{transform:translateY(0) scale(.985); filter:brightness(.96)}
-.btn svg{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
-.btn:hover svg{transform:translateX(3px)}
-.btn-ghost svg, .btn[href^="#"] svg, .btn[href*="whatsapp"] svg{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
-.btn[href*="whatsapp"]:hover svg, .btn[href^="tel:"]:hover svg{transform:scale(1.08) rotate(-6deg)}
-
-/* CTA dourado principal: profundidade tipográfica de moeda cunhada */
-.btn-green{
-  background:
-    linear-gradient(135deg,#8a6f33 0%,#a8893f 35%,#e6cf95 55%,#a8893f 75%,#8a6f33 100%);
-  background-size:220% 220%;
-  background-position:0% 50%;
-  color:#1f1d1a;
-  border:1px solid rgba(138,111,51,.65);
-  box-shadow:
-    0 1px 0 rgba(255,240,200,.55) inset,
-    0 -1px 0 rgba(0,0,0,.22) inset,
-    0 10px 24px -8px rgba(168,137,63,.55),
-    0 22px 48px -18px rgba(0,0,0,.55);
-  text-shadow:0 1px 0 rgba(255,240,200,.35);
-}
-.btn-green:hover{
-  background-position:100% 50%;
-  transform:translateY(-2px);
-  box-shadow:
-    0 1px 0 rgba(255,240,200,.7) inset,
-    0 -1px 0 rgba(0,0,0,.22) inset,
-    0 14px 30px -8px rgba(168,137,63,.6),
-    0 28px 60px -20px rgba(0,0,0,.6);
+    0 12px 28px -10px rgba(168,137,63,.45) !important;
 }
 
-/* Botão fantasma: borda viva, fundo se aquece */
-.btn-ghost{
-  background:rgba(231,201,137,.04);
-  color:#f0ead9;
-  border:1px solid rgba(217,189,125,.32);
-  backdrop-filter:blur(4px);
-}
-.btn-ghost:hover{
-  background:rgba(231,201,137,.09);
-  border-color:rgba(217,189,125,.7);
-  color:#f6ecd2;
-  transform:translateY(-2px);
-  box-shadow:0 14px 32px -16px rgba(0,0,0,.6);
-}
-
-/* Botão sólido dourado (CTA final): cunhagem premium */
-.btn-gold{
-  background:linear-gradient(180deg,#e6cf95 0%,#a8893f 55%,#7a6228 100%);
-  border:1px solid #8a6f33;
-  color:#1f1d1a;
-  box-shadow:
-    0 1px 0 rgba(255,245,215,.7) inset,
-    0 -2px 0 rgba(0,0,0,.25) inset,
-    0 16px 38px -12px rgba(168,137,63,.55),
-    0 30px 60px -24px rgba(0,0,0,.6);
-}
-.btn-gold:hover{
-  transform:translateY(-2px);
-  filter:saturate(1.08);
-  box-shadow:
-    0 1px 0 rgba(255,245,215,.8) inset,
-    0 -2px 0 rgba(0,0,0,.25) inset,
-    0 20px 44px -10px rgba(168,137,63,.65),
-    0 38px 72px -24px rgba(0,0,0,.65);
-}
-
-/* Brilho de varredura mais suave e mais largo */
-.btn::after{
-  width:48%;
-  background:linear-gradient(115deg,transparent 0%,rgba(255,245,215,.45) 50%,transparent 100%);
-  transition:left .9s cubic-bezier(.2,.7,.2,1);
-}
-
-/* Linha dourada decorativa no hover do CTA primário */
-.btn-green::before{
-  content:"";position:absolute;left:12px;right:12px;bottom:6px;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(31,29,26,.45),transparent);
-  opacity:.55;transition:opacity .3s ease;
-}
-.btn-green:hover::before{opacity:.9}
-
-/* Sticky mobile: mais presença */
+/* Sticky mobile */
 .sticky-mobile{box-shadow:0 -18px 40px -10px rgba(0,0,0,.55)}
-.sticky-mobile .btn{box-shadow:0 10px 26px -8px rgba(168,137,63,.55)}
+.sticky-mobile .btn{box-shadow:0 10px 24px -10px rgba(168,137,63,.5)}
 
 /* Cards: lift e borda dourada no hover */
 .cards article, .steps li, .reviews article, .docs article, .about-card{
