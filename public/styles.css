@@ -1122,3 +1122,176 @@ body{
   .hero-kpis{gap:18px}
   .hero-kpis strong{font-size:1.4rem}
 }
+
+/* ============================================================
+   v7 — Polimento de botões, foco, micro interações e revelações
+   ============================================================ */
+
+/* Botões: base refinada, profundidade e estados consistentes */
+.btn{
+  position:relative;
+  cursor:pointer;
+  user-select:none;
+  font-family:Inter,system-ui,sans-serif;
+  letter-spacing:.015em;
+  will-change:transform,box-shadow,background-position;
+  transition:
+    transform .35s cubic-bezier(.2,.7,.2,1),
+    box-shadow .35s cubic-bezier(.2,.7,.2,1),
+    background-position .6s ease,
+    background-color .25s ease,
+    color .2s ease,
+    border-color .25s ease,
+    filter .25s ease;
+}
+.btn:focus-visible{
+  outline:none;
+  box-shadow:
+    0 0 0 3px rgba(31,29,26,.85),
+    0 0 0 6px rgba(217,189,125,.85),
+    0 18px 38px rgba(168,137,63,.35);
+}
+.btn:active{transform:translateY(0) scale(.985); filter:brightness(.96)}
+.btn svg{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.btn:hover svg{transform:translateX(3px)}
+.btn-ghost svg, .btn[href^="#"] svg, .btn[href*="whatsapp"] svg{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.btn[href*="whatsapp"]:hover svg, .btn[href^="tel:"]:hover svg{transform:scale(1.08) rotate(-6deg)}
+
+/* CTA dourado principal: profundidade tipográfica de moeda cunhada */
+.btn-green{
+  background:
+    linear-gradient(135deg,#8a6f33 0%,#a8893f 35%,#e6cf95 55%,#a8893f 75%,#8a6f33 100%);
+  background-size:220% 220%;
+  background-position:0% 50%;
+  color:#1f1d1a;
+  border:1px solid rgba(138,111,51,.65);
+  box-shadow:
+    0 1px 0 rgba(255,240,200,.55) inset,
+    0 -1px 0 rgba(0,0,0,.22) inset,
+    0 10px 24px -8px rgba(168,137,63,.55),
+    0 22px 48px -18px rgba(0,0,0,.55);
+  text-shadow:0 1px 0 rgba(255,240,200,.35);
+}
+.btn-green:hover{
+  background-position:100% 50%;
+  transform:translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255,240,200,.7) inset,
+    0 -1px 0 rgba(0,0,0,.22) inset,
+    0 14px 30px -8px rgba(168,137,63,.6),
+    0 28px 60px -20px rgba(0,0,0,.6);
+}
+
+/* Botão fantasma: borda viva, fundo se aquece */
+.btn-ghost{
+  background:rgba(231,201,137,.04);
+  color:#f0ead9;
+  border:1px solid rgba(217,189,125,.32);
+  backdrop-filter:blur(4px);
+}
+.btn-ghost:hover{
+  background:rgba(231,201,137,.09);
+  border-color:rgba(217,189,125,.7);
+  color:#f6ecd2;
+  transform:translateY(-2px);
+  box-shadow:0 14px 32px -16px rgba(0,0,0,.6);
+}
+
+/* Botão sólido dourado (CTA final): cunhagem premium */
+.btn-gold{
+  background:linear-gradient(180deg,#e6cf95 0%,#a8893f 55%,#7a6228 100%);
+  border:1px solid #8a6f33;
+  color:#1f1d1a;
+  box-shadow:
+    0 1px 0 rgba(255,245,215,.7) inset,
+    0 -2px 0 rgba(0,0,0,.25) inset,
+    0 16px 38px -12px rgba(168,137,63,.55),
+    0 30px 60px -24px rgba(0,0,0,.6);
+}
+.btn-gold:hover{
+  transform:translateY(-2px);
+  filter:saturate(1.08);
+  box-shadow:
+    0 1px 0 rgba(255,245,215,.8) inset,
+    0 -2px 0 rgba(0,0,0,.25) inset,
+    0 20px 44px -10px rgba(168,137,63,.65),
+    0 38px 72px -24px rgba(0,0,0,.65);
+}
+
+/* Brilho de varredura mais suave e mais largo */
+.btn::after{
+  width:48%;
+  background:linear-gradient(115deg,transparent 0%,rgba(255,245,215,.45) 50%,transparent 100%);
+  transition:left .9s cubic-bezier(.2,.7,.2,1);
+}
+
+/* Linha dourada decorativa no hover do CTA primário */
+.btn-green::before{
+  content:"";position:absolute;left:12px;right:12px;bottom:6px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(31,29,26,.45),transparent);
+  opacity:.55;transition:opacity .3s ease;
+}
+.btn-green:hover::before{opacity:.9}
+
+/* Sticky mobile: mais presença */
+.sticky-mobile{box-shadow:0 -18px 40px -10px rgba(0,0,0,.55)}
+.sticky-mobile .btn{box-shadow:0 10px 26px -8px rgba(168,137,63,.55)}
+
+/* Cards: lift e borda dourada no hover */
+.cards article, .steps li, .reviews article, .docs article, .about-card{
+  transition:transform .4s cubic-bezier(.2,.7,.2,1), border-color .3s ease, box-shadow .4s ease, background .3s ease;
+  will-change:transform;
+}
+.cards article:hover, .steps li:hover, .reviews article:hover, .docs article:hover, .about-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(217,189,125,.55);
+  box-shadow:0 28px 60px -28px rgba(0,0,0,.6), 0 0 0 1px rgba(217,189,125,.18) inset;
+}
+
+/* Links inline com sublinhado dourado animado */
+.lede a, .about p a, footer a, .faq a{
+  position:relative;
+  color:var(--accent-soft, #d4c9ad);
+  text-decoration:none;
+  background-image:linear-gradient(90deg,#d9bd7d,#a8893f);
+  background-size:0% 1px;
+  background-repeat:no-repeat;
+  background-position:0 100%;
+  transition:background-size .35s ease, color .2s ease;
+}
+.lede a:hover, .about p a:hover, footer a:hover, .faq a:hover{
+  background-size:100% 1px;
+  color:#f0ead9;
+}
+
+/* Seções: revelar suavemente ao entrar no viewport (sem JS, usando timeline-scroll quando suportado) */
+@supports (animation-timeline: view()){
+  section > .container > *{
+    animation:revealIn linear both;
+    animation-timeline:view();
+    animation-range:entry 0% entry 40%;
+  }
+  @keyframes revealIn{
+    from{opacity:0; transform:translateY(24px)}
+    to{opacity:1; transform:translateY(0)}
+  }
+}
+
+/* Divisores de seção em foil dourado */
+section + section{position:relative}
+section + section::before{
+  content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);
+  width:min(420px,60%);height:1px;
+  background:linear-gradient(90deg,transparent,rgba(217,189,125,.45),transparent);
+  pointer-events:none;
+}
+
+/* Acessibilidade: respeitar redução de movimento */
+@media (prefers-reduced-motion: reduce){
+  .btn, .btn svg, .cards article, .steps li, .reviews article, .docs article, .about-card{
+    transition:none !important;
+    animation:none !important;
+  }
+  .btn:hover{transform:none}
+  .btn:hover svg{transform:none}
+}
