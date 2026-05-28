@@ -27,8 +27,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
 <link rel="preload" href="/styles.css" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/styles.css"></noscript>
@@ -56,7 +56,7 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 .header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
 .brand img{width:34px;height:auto}
-.brand-text{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;letter-spacing:.04em}
+.brand-text{font-family:'Fraunces',Georgia,serif;font-size:1.05rem;letter-spacing:.04em}
 .brand-text small{display:block;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.28em;color:#EEC57F;text-transform:uppercase;margin-top:2px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem}
 .btn-green{background:#EEC57F;color:#fff;box-shadow:0 6px 22px rgba(238,197,127,.32)}
@@ -65,7 +65,7 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 .hero .container{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;padding:80px 24px 96px}
 .eyebrow{display:inline-flex;align-items:center;gap:.6rem;text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:600;color:#EEC57F}
 .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:#EEC57F}
-.hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.08;color:#fff;margin:18px 0 .4em}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.08;color:#fff;margin:18px 0 .4em}
 .hero h1 em{font-style:normal;color:#EEC57F}
 .hero .lede{font-size:1.12rem;color:#d9dde6;max-width:540px;margin:0 0 24px}
 .hero-figure img{border-radius:18px;width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:0 30px 60px rgba(0,0,0,.4)}
@@ -136,28 +136,18 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 <section class="hero">
   <div class="container">
     <div>
-      <span class="eyebrow">Advocacia especializada em direito imobiliário</span>
-      <h1>O imóvel é seu. Falta só ele estar <em>no seu nome.</em></h1>
-      <span class="pre-headline">Para o proprietário bloqueado — e a família que merece dormir tranquila.</span>
-      <p class="lede">Usucapião e adjudicação compulsória por via extrajudicial. Resolvemos no cartório o que muita gente acha que só a Justiça resolve, com clareza de custos e atendimento humano do início ao fim.</p>
-      <ul class="hero-guarantees">
-        <li>Análise inicial sem custo e sem compromisso, com diagnóstico por escrito.</li>
-        <li>Custos separados em honorário, cartório e tributos — sem surpresa no meio do caminho.</li>
-        <li>Atendimento nacional 100% online, com procuração específica para o cartório do imóvel.</li>
-      </ul>
+      <span class="eyebrow">Direito Imobiliário</span>
+      <h1>O imóvel é seu. Falta só estar <em>no seu nome.</em></h1>
+      <p class="lede">Usucapião e adjudicação compulsória pela via extrajudicial. Resolvemos no cartório o que muita gente acha que só a Justiça resolve.</p>
       <div class="hero-ctas">
         <a class="btn btn-green btn-lg" href="https://wa.me/{{WHATSAPP}}?text=Ol%C3%A1%2C%20quero%20regularizar%20meu%20im%C3%B3vel." onclick="click_whatsapp('hero')">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          Falar com um especialista
+          Solicitar análise documental
         </a>
         <a class="btn btn-ghost btn-lg" href="#como-funciona">Como funciona</a>
       </div>
-      <div class="hero-kpis" aria-label="Indicadores do escritório">
-        <div><strong>12+</strong><span>anos de atuação</span></div>
-        <div><strong>380+</strong><span>imóveis regularizados</span></div>
-        <div><strong>94%</strong><span>via extrajudicial</span></div>
-        <div><strong>6–12<span style="font-size:.7em">m</span></strong><span>prazo médio</span></div>
-      </div>
+    </div>
+
     </div>
     <div class="hero-figure">
       <div class="seal" aria-hidden="true"><b>12+</b><small>anos</small></div>
@@ -187,16 +177,9 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 <section class="bg-soft">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Nossa promessa</span>
-      <h2>Tire o seu imóvel do limbo e devolva paz para a sua família.</h2>
-      <p>Mais de 30% dos imóveis no Brasil ainda estão fora do nome de quem mora ou comprou. Você não está sozinho, e existe um caminho seguro para resolver.</p>
-    </div>
-    <p class="pullquote">“Aqui, a gente destrava. Com técnica de quem é especialista, clareza de quem explica de verdade e o cuidado de quem trata o seu caso como único.” — Pedro Josino.</p>
-
-    <!-- Comparison table -->
-    <div class="section-head" style="margin-top:48px">
       <span class="eyebrow">Judicial × Extrajudicial</span>
-      <h2 style="font-size:clamp(1.4rem,2.4vw,2rem)">Por que o cartório resolve mais rápido — e mais barato.</h2>
+      <h2>Por que o cartório resolve mais rápido.</h2>
+      <p>Mais de 30% dos imóveis no Brasil estão fora do nome de quem mora ou comprou. Existe um caminho seguro, conduzido por escrito.</p>
     </div>
     <div class="compare">
       <table>
@@ -209,51 +192,30 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
         </thead>
         <tbody>
           <tr><td class="label">Prazo médio</td><td>3 a 7 anos</td><td class="col-good">6 a 12 meses</td></tr>
-          <tr><td class="label">Local</td><td>Fórum, com audiências presenciais</td><td class="col-good">Cartório, 100% documental</td></tr>
-          <tr><td class="label">Previsibilidade de custo</td><td>Custas processuais variáveis</td><td class="col-good">Emolumentos tabelados e estimados antes</td></tr>
-          <tr><td class="label">Risco de prescrição</td><td>Sujeito a sentença e recursos</td><td class="col-good">Resolução direta na matrícula</td></tr>
-          <tr><td class="label">Necessidade de presença</td><td>Audiências obrigatórias</td><td class="col-good">Tudo conduzido por procuração</td></tr>
+          <tr><td class="label">Local</td><td>Fórum, audiências presenciais</td><td class="col-good">Cartório, 100% documental</td></tr>
+          <tr><td class="label">Custo</td><td>Custas processuais variáveis</td><td class="col-good">Emolumentos estimados antes</td></tr>
+          <tr><td class="label">Presença</td><td>Audiências obrigatórias</td><td class="col-good">Conduzido por procuração</td></tr>
         </tbody>
       </table>
     </div>
-
-    <div class="section-cta" style="margin-top:34px">
-      <a class="btn btn-green btn-lg" href="https://wa.me/{{WHATSAPP}}?text=Ol%C3%A1%2C%20quero%20entender%20como%20regularizar%20meu%20im%C3%B3vel." onclick="click_whatsapp('promessa')">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        Conversar pelo WhatsApp
-      </a>
-    </div>
   </div>
 </section>
+
 
 <!-- COMO FUNCIONA -->
 <section id="como-funciona">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Como funciona</span>
-      <h2>Quatro passos, tudo conduzido por quem entende.</h2>
-      <p>Você manda o que tem em mãos. A gente cuida do resto, com você acompanhando cada etapa.</p>
+      <h2>Quatro passos, conduzidos pelo escritório.</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="num">01</div><h3>Envio dos documentos</h3><p>Por WhatsApp ou e-mail. Sem deslocamento, sem papelada física.</p></div>
-      <div class="step"><div class="num">02</div><h3>Análise do caso</h3><p>Avaliamos a viabilidade da via extrajudicial e mapeamos todos os custos, separando honorário de cartório.</p></div>
-      <div class="step"><div class="num">03</div><h3>Estratégia clara</h3><p>Você recebe o caminho por escrito: prazo estimado, documentos a reunir e próximos passos.</p></div>
-      <div class="step"><div class="num">04</div><h3>Ação até o registro</h3><p>Conduzimos a ata notarial, o procedimento no cartório e o registro final na matrícula do imóvel.</p></div>
+      <div class="step"><div class="num">01</div><h3>Envio dos documentos</h3><p>Por WhatsApp ou e-mail. Sem deslocamento.</p></div>
+      <div class="step"><div class="num">02</div><h3>Análise do caso</h3><p>Viabilidade, prazo estimado e mapa de custos por escrito.</p></div>
+      <div class="step"><div class="num">03</div><h3>Estratégia clara</h3><p>Caminho definido, documentos a reunir e próximos passos.</p></div>
+      <div class="step"><div class="num">04</div><h3>Ação até o registro</h3><p>Ata notarial, procedimento e registro na matrícula.</p></div>
     </div>
-  </div>
-</section>
 
-<!-- STORYTELLING -->
-<section class="bg-soft">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Casos como o seu</span>
-      <h2>“Comprei no contrato de gaveta e travou tudo.”</h2>
-    </div>
-    <div class="story">
-      <p>Marcos comprou a casa onde mora hoje com a família. Pagou em dia, mas nunca registrou. Quando apareceu um comprador, o banco travou o financiamento por falta de matrícula no nome dele. O vendedor original já tinha falecido, e os herdeiros se recusavam a assinar a escritura. Em 9 meses, conduzimos a adjudicação compulsória extrajudicial. Hoje o imóvel está registrado no nome de Marcos, valorizado e pronto para venda.</p>
-    </div>
-  </div>
 </section>
 
 <!-- DOCUMENTOS -->
@@ -262,17 +224,14 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
     <div class="section-head">
       <span class="eyebrow">Adiante seu atendimento</span>
       <h2>Documentos que costumam agilizar.</h2>
-      <p>Não precisa ter tudo em mãos. Quanto mais reunir, mais rápida fica a análise inicial.</p>
     </div>
     <ul class="docs">
       <li>Contrato de compra e venda, recibos ou contrato de gaveta</li>
       <li>Matrícula atualizada do imóvel</li>
       <li>IPTU dos últimos anos</li>
-      <li>Comprovantes de pagamento de água, luz e condomínio</li>
-      <li>RG e CPF de todos os envolvidos</li>
-      <li>Certidão de óbito e inventário, se houver herança</li>
-      <li>Planta ou croqui do imóvel</li>
-      <li>Nome e contato de testemunhas da posse</li>
+      <li>Comprovantes de água, luz e condomínio</li>
+      <li>RG e CPF dos envolvidos</li>
+      <li>Certidão de óbito e inventário, quando houver herança</li>
     </ul>
   </div>
 </section>
@@ -282,21 +241,19 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Situações atendidas</span>
-      <h2>Você se reconhece em alguma delas?</h2>
+      <h2>Você se reconhece em alguma?</h2>
     </div>
     <div class="cards">
-      <div class="card featured"><h3>Usucapião extrajudicial</h3><p>Posse mansa e pacífica há anos, sem registro no seu nome. Resolvemos direto no cartório.</p></div>
-      <div class="card featured"><h3>Adjudicação compulsória</h3><p>Vendedor sumiu, faleceu ou se recusa a passar a escritura. Forçamos a transferência judicial ou extrajudicial.</p></div>
-      <div class="card featured"><h3>Contrato de gaveta</h3><p>Imóvel comprado por contrato particular, com vários donos na cadeia. Reconstituímos a posse.</p></div>
+      <div class="card featured"><h3>Usucapião extrajudicial</h3><p>Posse mansa e pacífica há anos, sem registro no seu nome.</p></div>
+      <div class="card featured"><h3>Adjudicação compulsória</h3><p>Vendedor sumiu, faleceu ou se recusa a passar a escritura.</p></div>
+      <div class="card featured"><h3>Contrato de gaveta</h3><p>Imóvel comprado por contrato particular, com cadeia interrompida.</p></div>
       <div class="card"><h3>Herança travada</h3><p>Inventário parado, imóvel sem como ser vendido ou financiado.</p></div>
-      <div class="card"><h3>Imóvel rural sem registro</h3><p>Georreferenciamento, regularização fundiária e matrícula no nome certo.</p></div>
-      <div class="card"><h3>Loteamentos irregulares</h3><p>Lotes vendidos sem desmembramento aprovado, sem matrícula individual.</p></div>
-      <div class="card"><h3>Investidor de oportunidade</h3><p>Compra imóvel irregular barato para regularizar e revender com valorização.</p></div>
-      <div class="card"><h3>Casa de família sem inventário</h3><p>Imóvel no nome de pais ou avós já falecidos, sem partilha formal.</p></div>
-      <div class="card"><h3>Retificação de área</h3><p>A metragem real não bate com a registrada. Ajustamos no próprio cartório.</p></div>
+      <div class="card"><h3>Imóvel rural sem registro</h3><p>Georreferenciamento e matrícula no nome certo.</p></div>
+      <div class="card"><h3>Retificação de área</h3><p>Metragem real divergente da registrada, ajustada em cartório.</p></div>
     </div>
   </div>
 </section>
+
 
 <!-- SOBRE / AUTORIDADE -->
 <section class="bg-dark">
@@ -304,10 +261,9 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
     <div>
       <span class="eyebrow">Sobre o escritório</span>
       <h2>Um especialista, não um generalista.</h2>
-      <p>Pedro Josino Advogados é uma banca dedicada exclusivamente ao Direito Imobiliário, com dois territórios de atuação: regularização de imóveis e leilões. Atendimento nacional, conduzido de forma online, com a profundidade técnica de quem fez do nicho a sua carreira.</p>
-      <p>Pedro Josino é advogado inscrito na OAB/UF {{OAB}}, com pós-graduação em Direito Imobiliário e atuação consolidada em usucapião extrajudicial, adjudicação compulsória, regularização fundiária e litígios possessórios. É autor de pareceres técnicos publicados em veículos especializados e atua em parceria com cartórios de registro de imóveis em diferentes estados.</p>
-      <p>O escritório aplica um método próprio de diagnóstico documental: cada caso passa por uma análise prévia escrita antes de qualquer contratação, com mapeamento de viabilidade, prazo estimado e custos separados em três blocos — honorário, emolumentos de cartório e tributos.</p>
+      <p>Banca dedicada exclusivamente ao Direito Imobiliário. Cada caso passa por análise prévia escrita antes de qualquer contratação, com viabilidade, prazo e custos separados em honorário, cartório e tributos.</p>
     </div>
+
     <div>
       <div class="seals">
         <div class="seal">
@@ -343,31 +299,11 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
       <h2>Perguntas que ouvimos antes de começar.</h2>
     </div>
     <div class="faq">
-      <details><summary>Contrato de gaveta dá para regularizar?</summary><div class="answer">Sim. Quando há posse mansa e pacífica, a via mais comum é a usucapião extrajudicial, feita direto no cartório, com prazo bem menor que a via judicial.</div></details>
-      <details><summary>Quanto tempo leva a usucapião extrajudicial?</summary><div class="answer">Em casos com documentação reunida, a média é de 6 a 12 meses. O prazo depende do cartório e da concordância dos confrontantes.</div></details>
-      <details><summary>Quais custos existem além dos honorários?</summary><div class="answer">ITBI, ata notarial, emolumentos de cartório e registro. Tudo é estimado já na primeira reunião, separado do honorário, para não ter surpresa no meio do caminho.</div></details>
-      <details><summary>Posso fazer usucapião de imóvel do meu pai ou avô?</summary><div class="answer">Depende da situação possessória. Em muitos casos de herança com inventário travado, a adjudicação compulsória resolve mais rápido. Analisamos o caminho mais curto antes de propor qualquer ação.</div></details>
-      <details><summary>Preciso ir ao cartório pessoalmente?</summary><div class="answer">Não. O atendimento é nacional e online. Documentos por e-mail ou WhatsApp e procuração específica para conduzir tudo no cartório do local do imóvel.</div></details>
-      <details><summary>E se faltar algum documento antigo?</summary><div class="answer">Reconstituímos a cadeia possessória com declarações, contas, contratos e testemunhas. A análise inicial diz exatamente o que falta e como suprir.</div></details>
-    </div>
-  </div>
-</section>
+      <details><summary>Contrato de gaveta dá para regularizar?</summary><div class="answer">Sim. Havendo posse mansa e pacífica, a via mais comum é a usucapião extrajudicial, feita direto no cartório.</div></details>
+      <details><summary>Quanto tempo leva a usucapião extrajudicial?</summary><div class="answer">Com documentação reunida, a média é de 6 a 12 meses, dependendo do cartório e dos confrontantes.</div></details>
+      <details><summary>Quais custos existem além dos honorários?</summary><div class="answer">ITBI, ata notarial, emolumentos de cartório e registro, todos estimados antes da contratação.</div></details>
+      <details><summary>Preciso ir ao cartório pessoalmente?</summary><div class="answer">Não. Atendimento nacional e online, com procuração específica para conduzir o cartório do local do imóvel.</div></details>
 
-<!-- REVIEWS -->
-<section class="bg-soft">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">O que dizem os clientes</span>
-      <h2>Avaliações reais.</h2>
-    </div>
-    <div class="reviews-head">
-      <div class="gbadge"><strong>Google</strong><span class="stars">★★★★★</span><span>4,9 · {{NUM_REVIEWS}} avaliações</span></div>
-    </div>
-    <div class="reviews">
-      <div class="review"><div class="who">Marcos R.</div><div class="stars">★★★★★</div><p>Estava com a casa há 12 anos no contrato de gaveta. Em menos de um ano consegui registrar no meu nome. Atendimento direto e sem juridiquês.</p></div>
-      <div class="review"><div class="who">Cláudia A.</div><div class="stars">★★★★★</div><p>O Pedro explicou cada custo antes de começar. Nada de surpresa. Resolveu a adjudicação compulsória do imóvel da minha mãe.</p></div>
-      <div class="review"><div class="who">Eduardo T.</div><div class="stars">★★★★★</div><p>Comprei dois lotes irregulares para investir. Em 8 meses tinha as matrículas individualizadas. Profissionalismo de outro nível.</p></div>
-      <div class="review"><div class="who">Vanessa L.</div><div class="stars">★★★★★</div><p>Inventário travado há anos. Resolveram via extrajudicial. Hoje a casa da família está finalmente no nome de quem cuidou dela.</p></div>
     </div>
   </div>
 </section>
@@ -376,8 +312,9 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 <section id="contato" class="cta-final">
   <div class="container">
     <span class="eyebrow" style="color:var(--accent-soft)">Pronto para destravar</span>
-    <h2>Cansado de ver o imóvel sem estar no seu nome? Comece a análise agora.</h2>
-    <p>Resposta no mesmo dia útil. Atendimento nacional, 100% online. Custos transparentes desde a primeira conversa.</p>
+    <h2>Comece a análise documental.</h2>
+    <p>Resposta no mesmo dia útil. Atendimento nacional, 100% online.</p>
+
 
     <form class="form-mini" onsubmit="return enviarFormRegular(event)">
       <div class="row">
@@ -400,7 +337,7 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
     <div>
       <div class="brand-mini">
         <img src="/assets/logo-pj.png" alt="" width="40" height="40" loading="lazy" decoding="async">
-        <strong style="color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem">Pedro Josino Advogados</strong>
+        <strong style="color:#fff;font-family:'Fraunces',serif;font-size:1.1rem">Pedro Josino Advogados</strong>
       </div>
       <p>Especialistas em Direito Imobiliário. Regularização de imóveis e leilões, com atendimento nacional online.</p>
     </div>

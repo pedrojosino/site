@@ -27,8 +27,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
 <link rel="preload" href="/styles.css" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/styles.css"></noscript>
@@ -55,7 +55,7 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 .header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
 .brand img{width:34px;height:auto}
-.brand-text{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;letter-spacing:.04em}
+.brand-text{font-family:'Fraunces',Georgia,serif;font-size:1.05rem;letter-spacing:.04em}
 .brand-text small{display:block;font-family:Inter,sans-serif;font-size:.62rem;letter-spacing:.28em;color:#EEC57F;text-transform:uppercase;margin-top:2px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem}
 .btn-green{background:#EEC57F;color:#fff;box-shadow:0 6px 22px rgba(238,197,127,.32)}
@@ -64,7 +64,7 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 .hero .container{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;padding:80px 24px 96px}
 .eyebrow{display:inline-flex;align-items:center;gap:.6rem;text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:600;color:#EEC57F}
 .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:#EEC57F}
-.hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.08;color:#fff;margin:18px 0 .4em}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.08;color:#fff;margin:18px 0 .4em}
 .hero h1 em{font-style:normal;color:#EEC57F}
 .hero .lede{font-size:1.12rem;color:#d9dde6;max-width:540px;margin:0 0 24px}
 .hero-figure img{border-radius:18px;width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:0 30px 60px rgba(0,0,0,.4)}
@@ -134,28 +134,18 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 <section class="hero">
   <div class="container">
     <div>
-      <span class="eyebrow">Advocacia especializada em leilão de imóveis</span>
+      <span class="eyebrow">Direito Imobiliário · Leilões</span>
       <h1>Você arrematou. Agora <em>a chave precisa ser sua.</em></h1>
-      <span class="pre-headline">Para o arrematante que não confia o capital ao acaso.</span>
-      <p class="lede">Análise de risco antes do lance e imissão na posse depois. Aplicamos as teses do STJ a seu favor para proteger o investimento e entregar o imóvel desocupado e legalizado.</p>
-      <ul class="hero-guarantees">
-        <li>Due diligence do edital em até 48h, com cálculo do lance máximo viável.</li>
-        <li>Aplicação das teses do STJ (Tema 1.134 e 1.113) para reduzir ITBI e blindar tributos antigos.</li>
-        <li>Acompanhamento até a entrega das chaves — saída amigável ou ação específica.</li>
-      </ul>
+      <p class="lede">Análise de risco antes do lance e imissão na posse depois. Teses do STJ aplicadas para proteger o capital e entregar o imóvel desocupado.</p>
       <div class="hero-ctas">
         <a class="btn btn-green btn-lg" href="https://wa.me/{{WHATSAPP}}?text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20de%20risco%20de%20leil%C3%A3o." onclick="click_whatsapp('hero')">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          Solicitar análise do edital
+          Solicitar leitura técnica do edital
         </a>
         <a class="btn btn-ghost btn-lg" href="#como-funciona">Como funciona</a>
       </div>
-      <div class="hero-kpis" aria-label="Indicadores do escritório">
-        <div><strong>12+</strong><span>anos no nicho</span></div>
-        <div><strong>520+</strong><span>editais analisados</span></div>
-        <div><strong>R$18M</strong><span>protegidos</span></div>
-        <div><strong>48h</strong><span>para análise</span></div>
-      </div>
+    </div>
+
     </div>
     <div class="hero-figure">
       <div class="seal" aria-hidden="true"><b>STJ</b><small>1.134 · 1.113</small></div>
@@ -184,16 +174,9 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 <section class="bg-soft">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Nossa promessa</span>
-      <h2>Do edital à chave na mão, com técnica e transparência.</h2>
-      <p>O risco de leilão quase nunca está no lance. Ele aparece depois. A boa due diligence calcula o lance máximo viável e protege seu capital antes que a euforia vire prejuízo.</p>
-    </div>
-    <p class="pullquote">“Não vendemos promessa de retorno. Vendemos o método que separa a oportunidade real do prejuízo disfarçado.” — Pedro Josino.</p>
-
-    <!-- Comparison table -->
-    <div class="section-head" style="margin-top:48px">
       <span class="eyebrow">Lance no escuro × Due diligence</span>
-      <h2 style="font-size:clamp(1.4rem,2.4vw,2rem)">A diferença entre comprar oportunidade e comprar prejuízo.</h2>
+      <h2>Oportunidade real ou prejuízo disfarçado.</h2>
+      <p>O risco quase nunca está no lance. Aparece depois. A leitura técnica calcula o teto viável antes que a euforia vire prejuízo.</p>
     </div>
     <div class="compare">
       <table>
@@ -206,48 +189,29 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
         </thead>
         <tbody>
           <tr><td class="label">Ônus ocultos</td><td>Descobertos após o arremate</td><td class="col-good">Mapeados antes do lance</td></tr>
-          <tr><td class="label">ITBI</td><td>Calculado sobre o valor venal</td><td class="col-good">Tese STJ 1.113 aplicada (sobre o arremate)</td></tr>
+          <tr><td class="label">ITBI</td><td>Sobre o valor venal</td><td class="col-good">Tese STJ 1.113 aplicada</td></tr>
           <tr><td class="label">Dívidas anteriores</td><td>Risco de cobrança</td><td class="col-good">Tese STJ 1.134 invocada</td></tr>
-          <tr><td class="label">Lance máximo</td><td>Estimativa intuitiva</td><td class="col-good">Cálculo escrito com todos os custos</td></tr>
           <tr><td class="label">Imissão na posse</td><td>Você se vira sozinho</td><td class="col-good">Conduzida pelo escritório</td></tr>
         </tbody>
       </table>
     </div>
-
-    <div class="section-cta" style="margin-top:34px">
-      <a class="btn btn-green btn-lg" href="https://wa.me/{{WHATSAPP}}?text=Ol%C3%A1%2C%20quero%20conversar%20sobre%20leil%C3%A3o%20de%20im%C3%B3veis." onclick="click_whatsapp('promessa')">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        Conversar pelo WhatsApp
-      </a>
-    </div>
   </div>
 </section>
+
 
 <section id="como-funciona">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Como funciona</span>
-      <h2>Da leitura do edital à entrega das chaves.</h2>
-      <p>Acompanhamento de ponta a ponta. Você sabe o que pode dar errado e o que está coberto antes de dar o lance.</p>
+      <h2>Do edital à entrega das chaves.</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="num">01</div><h3>Envio do edital</h3><p>Você manda o link ou o PDF. Analisamos antes do prazo do lance, com tempo de sobra.</p></div>
-      <div class="step"><div class="num">02</div><h3>Due diligence</h3><p>Conferência da matrícula, ônus ocultos, ocupação e cálculo do lance máximo viável somando todos os custos.</p></div>
-      <div class="step"><div class="num">03</div><h3>Arremate e cartório</h3><p>Aplicamos as teses do STJ para reduzir ITBI e custo de transferência. Carta de arrematação e registro.</p></div>
-      <div class="step"><div class="num">04</div><h3>Imissão na posse</h3><p>Saída amigável quando possível, ação judicial específica quando necessário. Chave na mão.</p></div>
+      <div class="step"><div class="num">01</div><h3>Envio do edital</h3><p>Link ou PDF analisado antes do prazo do lance.</p></div>
+      <div class="step"><div class="num">02</div><h3>Due diligence</h3><p>Matrícula, ônus, ocupação e cálculo do lance máximo viável.</p></div>
+      <div class="step"><div class="num">03</div><h3>Arremate e cartório</h3><p>Teses do STJ aplicadas para reduzir ITBI e transferência.</p></div>
+      <div class="step"><div class="num">04</div><h3>Imissão na posse</h3><p>Saída amigável quando possível, ação específica quando necessário.</p></div>
     </div>
-  </div>
-</section>
 
-<section class="bg-soft">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Casos como o seu</span>
-      <h2>“Arrematei e não consigo entrar no imóvel.”</h2>
-    </div>
-    <div class="story">
-      <p>Rafael juntou capital durante anos para sua primeira arrematação. Venceu o lance, recebeu a carta de arrematação e descobriu que o antigo proprietário se recusava a sair, ameaçando processar a Caixa. Em 10 meses, conduzimos a ação de imissão na posse, aplicamos o Tema 1.134 do STJ para afastar a cobrança de IPTU anterior e reduzimos o ITBI com base no Tema 1.113. Rafael recebeu o imóvel desocupado e revendeu com lucro real.</p>
-    </div>
   </div>
 </section>
 
@@ -256,17 +220,14 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
     <div class="section-head">
       <span class="eyebrow">Adiante seu atendimento</span>
       <h2>Documentos que costumam agilizar.</h2>
-      <p>Quanto mais reunir antes da reunião, mais rápida fica a análise.</p>
     </div>
     <ul class="docs">
       <li>Edital completo do leilão (PDF ou link)</li>
       <li>Matrícula atualizada do imóvel</li>
       <li>Certidões de ônus reais e ações</li>
       <li>Última guia de IPTU</li>
-      <li>Declaração de débitos condominiais, se possível</li>
       <li>Avaliação da prefeitura (valor venal)</li>
-      <li>Fotos do imóvel ou laudo de vistoria</li>
-      <li>Seu documento de identificação e CPF</li>
+      <li>Documento de identificação e CPF</li>
     </ul>
   </div>
 </section>
@@ -278,28 +239,25 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
       <h2>Em qual fase você está?</h2>
     </div>
     <div class="cards">
-      <div class="card featured"><h3>Antes do lance</h3><p>Análise de risco completa do edital, da matrícula e da ocupação. Cálculo do lance máximo viável.</p></div>
-      <div class="card featured"><h3>Imissão na posse</h3><p>Você arrematou e o ocupante se recusa a sair. Conduzimos a ação específica até a entrega das chaves.</p></div>
-      <div class="card featured"><h3>Aplicação das teses do STJ</h3><p>Tema 1.134 contra cobrança de tributos anteriores. Tema 1.113 para reduzir o ITBI.</p></div>
-      <div class="card"><h3>Anulação de leilão</h3><p>Defesa contra tentativa do antigo proprietário de anular a arrematação.</p></div>
-      <div class="card"><h3>Investidor recorrente</h3><p>Análises ágeis em volume, padrão de relatório próprio, agilidade no calendário de praças.</p></div>
-      <div class="card"><h3>Primeira arrematação</h3><p>Acompanhamento didático para quem está dando o primeiro lance e não quer errar.</p></div>
-      <div class="card"><h3>Leilão extrajudicial bancário</h3><p>Imóveis retomados por inadimplência de financiamento. Riscos e prazos próprios.</p></div>
+      <div class="card featured"><h3>Antes do lance</h3><p>Análise de risco do edital, matrícula e ocupação. Cálculo do teto.</p></div>
+      <div class="card featured"><h3>Imissão na posse</h3><p>Ocupante recusa sair. Conduzimos até a entrega das chaves.</p></div>
+      <div class="card featured"><h3>Teses do STJ</h3><p>Tema 1.134 contra tributos antigos. Tema 1.113 para reduzir o ITBI.</p></div>
+      <div class="card"><h3>Anulação de leilão</h3><p>Defesa contra tentativa do antigo proprietário de anular o arremate.</p></div>
+      <div class="card"><h3>Leilão extrajudicial bancário</h3><p>Imóveis retomados por inadimplência. Riscos e prazos próprios.</p></div>
       <div class="card"><h3>Leilão judicial</h3><p>Praças designadas em execução. Análise da regularidade do procedimento.</p></div>
-      <div class="card"><h3>Recuperação de sinal e arras</h3><p>Quando a arrematação é desfeita por culpa do leiloeiro ou do credor.</p></div>
     </div>
   </div>
 </section>
+
 
 <section class="bg-dark">
   <div class="container about">
     <div>
       <span class="eyebrow">Sobre o escritório</span>
-      <h2>Especialista em leilão, não generalista que pega tudo.</h2>
-      <p>Pedro Josino Advogados é uma banca dedicada exclusivamente ao Direito Imobiliário, com profundidade no ambiente de leilões: leitura de editais, due diligence, teses do STJ e ações de imissão na posse. Atendimento nacional, conduzido de forma online.</p>
-      <p>Pedro Josino é advogado inscrito na OAB/UF {{OAB}}, com pós-graduação em Direito Imobiliário e atuação consolidada em leilões judiciais e extrajudiciais. Aplica de forma sistemática os Temas 1.134 e 1.113 do STJ, com método próprio de análise de risco para arrematantes e investidores.</p>
-      <p>Todos os casos passam por uma análise prévia escrita antes de qualquer contratação, com diagnóstico do edital, mapeamento de ônus ocultos e cálculo do lance máximo viável considerando ITBI, emolumentos, dívidas e eventual ação de imissão.</p>
+      <h2>Especialista em leilão, não generalista.</h2>
+      <p>Banca dedicada ao Direito Imobiliário, com profundidade em leitura de editais, due diligence, teses do STJ e imissão na posse. Cada caso recebe análise prévia escrita antes da contratação.</p>
     </div>
+
     <div>
       <div class="seals">
         <div class="seal">
@@ -334,30 +292,11 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
       <h2>O que os arrematantes mais perguntam.</h2>
     </div>
     <div class="faq">
-      <details><summary>Quem paga as dívidas atrasadas de IPTU e condomínio?</summary><div class="answer">Para débitos tributários anteriores ao arremate, o STJ no Tema 1.134 firmou que o arrematante não responde, salvo previsão expressa em edital. Para condomínio, a análise depende do edital e da publicidade dos débitos.</div></details>
-      <details><summary>Quanto vou pagar de ITBI?</summary><div class="answer">O STJ no Tema 1.113 firmou que o ITBI incide sobre o valor da arrematação, não sobre a avaliação da prefeitura. Aplicamos a tese para reduzir o custo de transferência.</div></details>
-      <details><summary>Preciso de escritura pública?</summary><div class="answer">A depender do valor, a escritura pode ser dispensada quando há carta de arrematação. Analisamos caso a caso para reduzir custo de cartório.</div></details>
-      <details><summary>Quanto tempo leva para desocupar o imóvel?</summary><div class="answer">Leilão extrajudicial gira em torno de 12 meses. Judicial pode passar de 16. O desconto da arrematação já precifica esse tempo, e buscamos sempre a saída amigável antes do confronto.</div></details>
-      <details><summary>A análise de risco está inclusa ou é cobrada à parte?</summary><div class="answer">A análise é o ponto de partida e tem honorário próprio. Ela calcula o lance máximo viável somando todos os custos. Quem passa desse teto compra prejuízo.</div></details>
-      <details><summary>Existe risco real de eu perder o imóvel?</summary><div class="answer">Existe sim a possibilidade de anulação do leilão em casos específicos. A boa due diligence mapeia esse risco antes do lance e orienta a decisão com transparência.</div></details>
-    </div>
-  </div>
-</section>
+      <details><summary>Quem paga as dívidas atrasadas de IPTU e condomínio?</summary><div class="answer">Para tributos anteriores ao arremate, o STJ no Tema 1.134 firmou que o arrematante não responde, salvo previsão expressa em edital.</div></details>
+      <details><summary>Quanto vou pagar de ITBI?</summary><div class="answer">O STJ no Tema 1.113 firmou que o ITBI incide sobre o valor da arrematação, não sobre a avaliação da prefeitura.</div></details>
+      <details><summary>Quanto tempo leva para desocupar o imóvel?</summary><div class="answer">Leilão extrajudicial em torno de 12 meses; judicial pode passar de 16. Buscamos sempre a saída amigável antes.</div></details>
+      <details><summary>Existe risco de eu perder o imóvel?</summary><div class="answer">A anulação é possível em casos específicos. A due diligence mapeia esse risco antes do lance e orienta a decisão.</div></details>
 
-<section class="bg-soft">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">O que dizem os clientes</span>
-      <h2>Avaliações reais.</h2>
-    </div>
-    <div class="reviews-head">
-      <div class="gbadge"><strong>Google</strong><span class="stars">★★★★★</span><span>4,9 · {{NUM_REVIEWS}} avaliações</span></div>
-    </div>
-    <div class="reviews">
-      <div class="review"><div class="who">Rafael C.</div><div class="stars">★★★★★</div><p>Primeira arrematação. Estava com medo de errar. O Pedro fez a análise, calculou o teto e ainda conduziu a imissão. Recebi as chaves em 10 meses.</p></div>
-      <div class="review"><div class="who">Júlia M.</div><div class="stars">★★★★★</div><p>Aplicaram o Tema 1.134 do STJ e me livraram de mais de R$ 40 mil em IPTU atrasado. Honorário se pagou na economia.</p></div>
-      <div class="review"><div class="who">Sandro P.</div><div class="stars">★★★★★</div><p>Investidor de leilão há 6 anos. Mudei para o escritório do Pedro pela agilidade nos relatórios de due diligence.</p></div>
-      <div class="review"><div class="who">Helena R.</div><div class="stars">★★★★★</div><p>Conseguiram a saída amigável do ocupante. Sem confronto, sem desgaste. Imóvel pronto para revenda.</p></div>
     </div>
   </div>
 </section>
@@ -365,8 +304,9 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
 <section id="contato" class="cta-final">
   <div class="container">
     <span class="eyebrow" style="color:var(--accent-soft)">Pronto para arrematar com segurança</span>
-    <h2>Recebeu o edital? Envie agora e receba a análise antes do prazo do lance.</h2>
-    <p>Resposta no mesmo dia útil. Atendimento nacional, 100% online. Honorário transparente desde a primeira conversa.</p>
+    <h2>Envie o edital e receba a leitura técnica.</h2>
+    <p>Resposta no mesmo dia útil. Atendimento nacional, 100% online.</p>
+
 
     <form class="form-mini" onsubmit="return enviarFormLeilao(event)">
       <div class="row">
@@ -389,7 +329,7 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0A0A0A;line-height:1
     <div>
       <div class="brand-mini">
         <img src="/assets/logo-pj.png" alt="" width="40" height="40" loading="lazy" decoding="async">
-        <strong style="color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem">Pedro Josino Advogados</strong>
+        <strong style="color:#fff;font-family:'Fraunces',serif;font-size:1.1rem">Pedro Josino Advogados</strong>
       </div>
       <p>Especialistas em Direito Imobiliário. Regularização de imóveis e leilões, com atendimento nacional online.</p>
     </div>

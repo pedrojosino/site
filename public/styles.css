@@ -1,6 +1,6 @@
 /* ============================================================
    Pedro Josino Advogados — LP shared styles (v3)
-   Paleta Preto Profundo + Dourado Champagne. Playfair + Montserrat.
+   Paleta Preto Profundo + Dourado Champagne. Fraunces + Inter.
    ============================================================ */
 
 
@@ -21,8 +21,8 @@
   --line-strong:#C19553;
   --bg-soft:#F5F5F5;
   --bg-cream:#F5F5F5;
-  --serif:"Playfair Display", Georgia, "Times New Roman", serif;
-  --sans:"Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --maxw:1200px;
   --r-sm:8px;
   --r-md:14px;
@@ -928,7 +928,7 @@ body{
 /* pre-headline */
 .hero .pre-headline{
   display:block; margin:0 0 18px;
-  font-family:'Playfair Display', Georgia, serif;
+  font-family:'Fraunces', Georgia, serif;
   font-style:italic;
   font-size:1.18rem;
   color:#EEC57F;
@@ -984,7 +984,7 @@ body{
 }
 .hero-kpis div{display:flex; flex-direction:column; min-width:90px}
 .hero-kpis strong{
-  font-family:'Playfair Display', Georgia, serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:1.7rem; font-weight:600; color:#EEC57F;
   line-height:1; letter-spacing:.01em;
 }
@@ -1054,7 +1054,7 @@ body{
   z-index:4;
 }
 .hero-figure .authority-card strong{
-  font-family:'Playfair Display', Georgia, serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:1.15rem; letter-spacing:.02em;
 }
 .hero-figure .authority-card span{
@@ -1069,7 +1069,7 @@ body{
     radial-gradient(circle at 30% 30%, #EEC57F, #EEC57F 60%, #C19553 100%);
   color:#0A0A0A;
   display:flex; align-items:center; justify-content:center; flex-direction:column;
-  font-family:'Playfair Display', Georgia, serif;
+  font-family:'Fraunces', Georgia, serif;
   text-align:center; line-height:1.05;
   box-shadow:0 14px 30px -8px rgba(238,197,127,.6), inset 0 0 0 2px rgba(255,255,255,.35), inset 0 0 0 4px rgba(138,111,51,.5);
   z-index:5;
