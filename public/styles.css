@@ -1,6 +1,6 @@
 /* ============================================================
    Pedro Josino Advogados — LP shared styles (v3)
-   Paleta Preto Profundo + Dourado Champagne. Playfair + Montserrat.
+   Paleta Preto Profundo + Dourado Champagne. Fraunces + Inter.
    ============================================================ */
 
 
@@ -22,7 +22,7 @@
   --bg-soft:#F5F5F5;
   --bg-cream:#F5F5F5;
   --serif:"Fraunces", Georgia, "Times New Roman", serif;
-  --sans:"Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --maxw:1200px;
   --r-sm:8px;
   --r-md:14px;
