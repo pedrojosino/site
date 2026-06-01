@@ -137,7 +137,7 @@ p{margin:0 0 1em;text-wrap:pretty}
   opacity:.5;
 }
 .hero .container{
-  position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center;
+  position:relative;display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center;
   padding-top:96px;padding-bottom:112px;
 }
 .hero h1{color:#fff;margin-top:22px;letter-spacing:-.02em}
@@ -1045,14 +1045,16 @@ body{
   position:absolute; left:50%; bottom:-28px; transform:translateX(-50%);
   background:linear-gradient(180deg,#F5F5F5,#F5F5F5);
   color:#0A0A0A;
-  padding:14px 22px;
+  padding:16px 26px;
   border-radius:12px;
   border:1px solid rgba(238,197,127,.4);
   box-shadow:0 18px 40px -10px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.6);
-  display:flex; flex-direction:column; gap:2px;
-  min-width:280px; text-align:center;
+  display:flex; flex-direction:column; gap:4px;
+  min-width:300px; text-align:center;
   z-index:4;
 }
+.hero-figure .authority-card::before,
+.hero-figure .authority-card::after{ display:none !important; content:none !important; }
 .hero-figure .authority-card strong{
   font-family:'Fraunces', Georgia, serif;
   font-size:1.15rem; letter-spacing:.02em;
