@@ -5,6 +5,9 @@
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return;
+  // Em mobile, desativa todos os efeitos pesados (parallax, tilt, magnetic, count-up)
+  // pra evitar travamento. Mantém só reveal e progress bar leves.
+  var isMobile = window.matchMedia('(max-width: 900px)').matches || ('ontouchstart' in window);
 
   var ready = function (fn) {
     if (document.readyState !== 'loading') fn();
@@ -34,6 +37,7 @@
 
     /* ============ 2) Hero parallax leve (mouse + scroll) ============ */
     try {
+      if (isMobile) throw new Error('skip-mobile');
       var hero = document.querySelector('.hero');
       var heroFig = document.querySelector('.hero-figure, .hero img, .hero picture');
       if (hero) {
@@ -62,6 +66,7 @@
 
     /* ============ 3) Botões magnéticos (sutil) ============ */
     try {
+      if (isMobile) throw new Error('skip-mobile');
       var magnets = document.querySelectorAll('.btn, .btn-primary, .btn-wa, .btn-ghost');
       magnets.forEach(function (b) {
         var raf = 0, tx = 0, ty = 0;
@@ -86,6 +91,7 @@
 
     /* ============ 4) Tilt 3D leve nos cards ============ */
     try {
+      if (isMobile) throw new Error('skip-mobile');
       var cards = document.querySelectorAll('.cards article, .docs article, .about-card');
       cards.forEach(function (c) {
         var raf = 0, rx = 0, ry = 0;
