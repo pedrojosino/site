@@ -6,15 +6,11 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/", "destination": "/regularizacao-de-imoveis/index.html" },
-    { "source": "/leilao", "destination": "/leilao-de-imoveis/index.html" },
-    { "source": "/quem-e", "destination": "/quem-e/index.html" },
-    { "source": "/politica-de-privacidade", "destination": "/politica-de-privacidade/index.html" }
-  ],
   "redirects": [
     { "source": "/regularizacao-de-imoveis", "destination": "/", "permanent": true },
-    { "source": "/leilao-de-imoveis", "destination": "/leilao", "permanent": true }
+    { "source": "/regularizacao-de-imoveis/", "destination": "/", "permanent": true },
+    { "source": "/leilao-de-imoveis", "destination": "/leilao", "permanent": true },
+    { "source": "/leilao-de-imoveis/", "destination": "/leilao", "permanent": true }
   ],
   "headers": [
     {
@@ -33,10 +29,6 @@
     {
       "source": "/assets/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
-    },
-    {
-      "source": "/(styles\\.css|fx\\.js)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }]
     }
   ]
 }
