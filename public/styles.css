@@ -1413,3 +1413,21 @@ section + section::before{
 
 /* v9 — WhatsApp icon hereda cor do botão (não verde puro) */
 .btn-green svg{color:#fff;stroke:currentColor}
+
+/* v10 — Scroll suave para âncoras + destaque do form ao chegar */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+}
+#contato:target,
+#contato{scroll-margin-top:80px}
+.form-mini{transition:box-shadow .6s ease}
+#contato:target .form-mini{
+  box-shadow:0 0 0 2px rgba(238,197,127,.45), 0 30px 60px rgba(0,0,0,.25);
+  animation:formPulse 1.2s ease-out 1;
+}
+@keyframes formPulse{
+  0%{box-shadow:0 0 0 0 rgba(238,197,127,0)}
+  50%{box-shadow:0 0 0 8px rgba(238,197,127,.25)}
+  100%{box-shadow:0 0 0 2px rgba(238,197,127,.45)}
+}
