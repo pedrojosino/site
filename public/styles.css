@@ -12,6 +12,8 @@
   --accent:#EEC57F;
   --accent-2:#EEC57F;
   --accent-soft:#EEC57F;
+  /* Versão escura pra contraste em fundo claro (WCAG AA) */
+  --accent-dark:#8B6914;
   --wa:#EEC57F;
   --wa-dark:#C19553;
   --text:#0A0A0A;
@@ -1436,4 +1438,24 @@ html{scroll-behavior:smooth}
   0%{box-shadow:0 0 0 0 rgba(238,197,127,0)}
   50%{box-shadow:0 0 0 8px rgba(238,197,127,.25)}
   100%{box-shadow:0 0 0 2px rgba(238,197,127,.45)}
+}
+
+/* v11 — Contraste do dourado em fundos claros (WCAG AA) */
+.bg-soft .eyebrow,
+section:not(.bg-dark):not(.hero):not(.cta-final):not(.stats):not(.hero-about) .eyebrow{
+  color:var(--accent-dark) !important;
+}
+.bg-soft .eyebrow::before,
+section:not(.bg-dark):not(.hero):not(.cta-final):not(.stats):not(.hero-about) .eyebrow::before{
+  background:var(--accent-dark) !important;
+}
+/* Numerais (01, 02...) em fundo claro */
+.bg-soft .step .num,
+.bg-soft .num,
+section:not(.bg-dark):not(.hero):not(.cta-final):not(.stats):not(.hero-about) .step .num{
+  color:var(--accent-dark) !important;
+}
+/* Bordas dos cards em fundo claro mais escuras */
+.bg-soft .card{
+  border-color:rgba(139,105,20,.25) !important;
 }
