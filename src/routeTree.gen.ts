@@ -10,7 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RegularizacaoDeImoveisRouteImport } from './routes/regularizacao-de-imoveis'
+import { Route as QuemERouteImport } from './routes/quem-e'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as LeilaoDeImoveisRouteImport } from './routes/leilao-de-imoveis'
+import { Route as LeilaoRouteImport } from './routes/leilao'
 import { Route as IndexRouteImport } from './routes/index'
 
 const RegularizacaoDeImoveisRoute = RegularizacaoDeImoveisRouteImport.update({
@@ -18,9 +21,24 @@ const RegularizacaoDeImoveisRoute = RegularizacaoDeImoveisRouteImport.update({
   path: '/regularizacao-de-imoveis',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuemERoute = QuemERouteImport.update({
+  id: '/quem-e',
+  path: '/quem-e',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LeilaoDeImoveisRoute = LeilaoDeImoveisRouteImport.update({
   id: '/leilao-de-imoveis',
   path: '/leilao-de-imoveis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeilaoRoute = LeilaoRouteImport.update({
+  id: '/leilao',
+  path: '/leilao',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,31 +49,62 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/leilao': typeof LeilaoRoute
   '/leilao-de-imoveis': typeof LeilaoDeImoveisRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/quem-e': typeof QuemERoute
   '/regularizacao-de-imoveis': typeof RegularizacaoDeImoveisRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/leilao': typeof LeilaoRoute
   '/leilao-de-imoveis': typeof LeilaoDeImoveisRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/quem-e': typeof QuemERoute
   '/regularizacao-de-imoveis': typeof RegularizacaoDeImoveisRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/leilao': typeof LeilaoRoute
   '/leilao-de-imoveis': typeof LeilaoDeImoveisRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/quem-e': typeof QuemERoute
   '/regularizacao-de-imoveis': typeof RegularizacaoDeImoveisRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/leilao-de-imoveis' | '/regularizacao-de-imoveis'
+  fullPaths:
+    | '/'
+    | '/leilao'
+    | '/leilao-de-imoveis'
+    | '/politica-de-privacidade'
+    | '/quem-e'
+    | '/regularizacao-de-imoveis'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/leilao-de-imoveis' | '/regularizacao-de-imoveis'
-  id: '__root__' | '/' | '/leilao-de-imoveis' | '/regularizacao-de-imoveis'
+  to:
+    | '/'
+    | '/leilao'
+    | '/leilao-de-imoveis'
+    | '/politica-de-privacidade'
+    | '/quem-e'
+    | '/regularizacao-de-imoveis'
+  id:
+    | '__root__'
+    | '/'
+    | '/leilao'
+    | '/leilao-de-imoveis'
+    | '/politica-de-privacidade'
+    | '/quem-e'
+    | '/regularizacao-de-imoveis'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LeilaoRoute: typeof LeilaoRoute
   LeilaoDeImoveisRoute: typeof LeilaoDeImoveisRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
+  QuemERoute: typeof QuemERoute
   RegularizacaoDeImoveisRoute: typeof RegularizacaoDeImoveisRoute
 }
 
@@ -68,11 +117,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RegularizacaoDeImoveisRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quem-e': {
+      id: '/quem-e'
+      path: '/quem-e'
+      fullPath: '/quem-e'
+      preLoaderRoute: typeof QuemERouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/leilao-de-imoveis': {
       id: '/leilao-de-imoveis'
       path: '/leilao-de-imoveis'
       fullPath: '/leilao-de-imoveis'
       preLoaderRoute: typeof LeilaoDeImoveisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leilao': {
+      id: '/leilao'
+      path: '/leilao'
+      fullPath: '/leilao'
+      preLoaderRoute: typeof LeilaoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,7 +157,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LeilaoRoute: LeilaoRoute,
   LeilaoDeImoveisRoute: LeilaoDeImoveisRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
+  QuemERoute: QuemERoute,
   RegularizacaoDeImoveisRoute: RegularizacaoDeImoveisRoute,
 }
 export const routeTree = rootRouteImport
