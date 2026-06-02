@@ -1459,3 +1459,63 @@ section:not(.bg-dark):not(.hero):not(.cta-final):not(.stats):not(.hero-about) .s
 .bg-soft .card{
   border-color:rgba(139,105,20,.25) !important;
 }
+
+/* v12 — Checkbox LGPD bonita */
+.opt-in{
+  display:flex !important;
+  gap:.7rem !important;
+  align-items:flex-start !important;
+  background:#FAF7EE;
+  border:1px solid rgba(139,105,20,.18);
+  padding:14px 16px;
+  border-radius:8px;
+  margin-top:14px !important;
+  font-size:.88rem !important;
+  color:#3A332C !important;
+  line-height:1.5;
+}
+.opt-in input[type="checkbox"]{
+  appearance:none;
+  -webkit-appearance:none;
+  width:22px;
+  height:22px;
+  min-width:22px;
+  border:1.5px solid var(--accent-dark);
+  border-radius:4px;
+  background:#fff;
+  cursor:pointer;
+  position:relative;
+  margin:0 !important;
+  transition:all .2s ease;
+  flex-shrink:0;
+}
+.opt-in input[type="checkbox"]:hover{
+  border-color:var(--accent);
+}
+.opt-in input[type="checkbox"]:checked{
+  background:var(--accent-dark);
+  border-color:var(--accent-dark);
+}
+.opt-in input[type="checkbox"]:checked::after{
+  content:'';
+  position:absolute;
+  left:6px;
+  top:2px;
+  width:7px;
+  height:13px;
+  border:solid #fff;
+  border-width:0 2.5px 2.5px 0;
+  transform:rotate(45deg);
+}
+.opt-in input[type="checkbox"]:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+}
+.opt-in a{
+  color:var(--accent-dark);
+  text-decoration:underline;
+  font-weight:600;
+}
+.opt-in a:hover{
+  color:#6b5010;
+}
