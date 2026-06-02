@@ -393,10 +393,14 @@ section{padding:104px 0;position:relative}
   .story{padding:28px 24px}
   .story p{font-size:1.15rem}
   .sticky-mobile{display:block}
-  .hero-ctas .btn-ghost{display:none}
-  .header .btn{padding:11px 16px;font-size:.85rem}
-  .header .btn svg{width:16px;height:16px}
+  /* Esconde o CTA do header em mobile pequeno — sticky-mobile já cumpre essa função */
+  .header .btn-green{display:none}
   body{padding-bottom:80px}
+  /* Reduz vácuo entre header e hero em mobile */
+  .hero .container{padding-top:32px !important; padding-bottom:48px !important; gap:28px !important}
+  .hero h1{font-size:clamp(2.2rem,9vw,3rem) !important}
+  .hero .eyebrow{font-size:.7rem; letter-spacing:.14em}
+  .hero .lede{font-size:1rem}
 }
 
 @media (prefers-reduced-motion: reduce){
