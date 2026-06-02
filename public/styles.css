@@ -1397,3 +1397,15 @@ section + section::before{
   .hero::before, .hero::after, .hero-figure{ transform:none !important; transition:none !important }
   .fx-progress, section + section::before{ animation:none !important }
 }
+
+/* v9 — acessibilidade: skip link */
+.skip-link{
+  position:absolute;left:-999px;top:0;z-index:9999;
+  background:#0A0A0A;color:#EEC57F;padding:12px 18px;
+  font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:.92rem;
+  border:1px solid #EEC57F;border-radius:6px;text-decoration:none;
+}
+.skip-link:focus{left:16px;top:16px;outline:2px solid #EEC57F;outline-offset:3px}
+
+/* v9 — WhatsApp icon hereda cor do botão (não verde puro) */
+.btn-green svg{color:#fff;stroke:currentColor}

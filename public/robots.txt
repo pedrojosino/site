@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /__l5e/
+
+Sitemap: https://pedrojosino.com.br/sitemap.xml

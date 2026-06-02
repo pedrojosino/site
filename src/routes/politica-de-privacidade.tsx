@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore raw import
-import html from "../../public/regularizacao-de-imoveis/index.html?raw";
+import html from "../../public/politica-de-privacidade/index.html?raw";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/politica-de-privacidade")({
   server: {
     handlers: {
       GET: async () =>
