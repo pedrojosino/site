@@ -772,7 +772,7 @@ body{
 }
 .compare td{padding:14px 22px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--text-soft)}
 .compare td.label{color:var(--bg-dark);font-weight:600;background:#F5F5F5;width:30%}
-.compare td.col-good{background:#F5F5F5;color:var(--bg-dark);border-left:1px solid var(--accent);border-right:1px solid var(--accent)}
+.compare td.col-good{background:#FAF1DD;color:var(--bg-dark);border-left:1px solid var(--accent);border-right:1px solid var(--accent);font-weight:600}
 .compare tbody tr:last-child td{border-bottom:none}
 .compare tbody tr:last-child td.col-good{border-bottom:1px solid var(--accent)}
 @media(max-width:760px){
@@ -1419,8 +1419,12 @@ section + section::before{
 }
 .skip-link:focus{left:16px;top:16px;outline:2px solid #EEC57F;outline-offset:3px}
 
-/* v9 — WhatsApp icon hereda cor do botão (não verde puro) */
-.btn-green svg{color:#fff;stroke:currentColor}
+/* v13 — CTAs sem ícone do WhatsApp (tom institucional "Falar com advogado") */
+.btn-green svg,
+.hero .btn-green svg,
+.bg-dark .btn-green svg,
+.sticky-mobile .btn-green svg{display:none !important}
+.btn-green{gap:0 !important}
 
 /* v10 — Scroll suave para âncoras + destaque do form ao chegar */
 html{scroll-behavior:smooth}
